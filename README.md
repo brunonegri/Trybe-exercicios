@@ -1,6 +1,6 @@
 # Trybe - Conteúdo
 
-_Minha evolução como Desenvolvedor Web encontra-se aqui [](https://brunonegri.github.io/)_
+_Minha evolução como Desenvolvedor Web encontra-se aqui [https://brunonegri.github.io/](https://brunonegri.github.io/)_
 
 Neste repositório constam todas as atividades de aprendizagem desenvolvidas por _[Bruno Negri](https://www.linkedin.com/in/bruno-negri-8a0532156/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
