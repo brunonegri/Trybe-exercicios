@@ -58,10 +58,159 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      const wayBody = document.getElementsByTagName("body");
+      const wayMain = document.getElementsByClassName("main-content");
+      const waySection = document.getElementsByTagName("section");
+      const waySectionLeft = document.getElementsByClassName("left-content");
+      const waySectionRight = document.getElementsByClassName("right-content");
+      const wayUl = document.getElementsByTagName('ul')
+
+      // Requesito1
+
+      function criaH1() {
+        let elemento = document.createElement("h1");
+        elemento.innerText = "Exercício 5.2 - JavaScript DOM";
+        elemento.classList = 'title'
+        wayBody[0].appendChild(elemento);
+      }
+      criaH1();
+
+      // Requesito2
+
+      function criaMain() {
+        let elemento = document.createElement("main");
+        elemento.classList = "main-content";
+        wayBody[0].appendChild(elemento);
+      }
+      criaMain();
+
+      // Requesito3
+
+      function criaSection() {
+        let elemento = document.createElement("section");
+        elemento.classList = "center-content";
+        wayMain[0].appendChild(elemento);
+      }
+      criaSection();
+
+      // Requesito4
+
+      function criaP() {
+        let elemento = document.createElement("p");
+        elemento.innerText = "Algum Texto";
+        waySection[0].appendChild(elemento);
+      }
+      criaP();
+
+      // Requesito5
+
+      function criaSectionLeft() {
+        let elemento = document.createElement("section");
+        elemento.classList = "left-content";
+        wayMain[0].appendChild(elemento);
+      }
+      criaSectionLeft();
+
+      // Requesito6
+
+      function criaSectionRight() {
+        let elemento = document.createElement("section");
+        elemento.classList = "right-content";
+        wayMain[0].appendChild(elemento);
+      }
+      criaSectionRight();
+
+      // Requesito7
+
+      function criaImg() {
+        let elemento = document.createElement("img");
+        elemento.src = "https://picsum.photos/200";
+        elemento.classList = "small-image";
+        waySectionLeft[0].appendChild(elemento);
+      }
+      criaImg();
+
+      // Requesito8
+
+      function criaUl() {
+        let arrayContagem = [
+          "um",
+          "dois",
+          "três",
+          "quatro",
+          "cinco",
+          "seis",
+          "sete",
+          "oito",
+          "nove",
+          "dez",
+        ];
+        for (let index = 0; index < arrayContagem.length; index++) {
+          let elemento = document.createElement("ul");
+          elemento.innerText = arrayContagem[index];
+          waySectionRight[0].appendChild(elemento);
+        }
+      }
+      criaUl();
+
+      // Requesito9
+
+      function criaH3() {
+        for (let index = 0; index < 3; index++) {
+          let elemento = document.createElement("h3");
+          elemento.classList = 'description'
+          elemento.innerText = 'teste'
+          wayMain[0].appendChild(elemento);
+        }
+      }
+      criaH3();
+
+      // Requesito ''3''
+
+      function removeLeftSection() {
+        wayMain[0].removeChild(waySectionLeft[0])
+      }
+      removeLeftSection()
+
+      // Requesito ''4''
+
+      function centerSection() {
+        waySectionRight[0].style.marginRight = 'auto'
+      }
+      centerSection()
+
+      // Requesito ''5''
+
+      function mudaCorSection() {
+        waySection[0].style.backgroundColor = 'green'
+      }
+      mudaCorSection()
+
+      // Requesito ''6''
+
+      function removeLastTwo() {
+        for (let i = 0; i < wayUl.length; i++) {
+          if (wayUl[i] == wayUl[wayUl.length-1]) {
+            waySectionRight[0].removeChild(wayUl[i])
+          }
+        }
+        for (let z = 0; z < wayUl.length; z++) {
+          if (wayUl[z] == wayUl[wayUl.length-1]) {
+            waySectionRight[0].removeChild(wayUl[z])
+          }
+        }
+      }
+      removeLastTwo()
+
+
+
+
+
+
+
     </script>
   </body>
 </html>
-
 
 <!-- O objetivo desses exercícios é colocar em prática o que você acabou de aprender sobre DOM. Por isso, você deve fazer os exercícios utilizando apenas código JavaScript , o qual deve ser inserido entre as tags <script> e </script> .
 Para uma melhor organização, faça commits a cada tarefa concluída. Vamos aos exercícios:
